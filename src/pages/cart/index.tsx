@@ -19,7 +19,7 @@ export function Cart() {
                 </div>
             )}
             {cart.map(item => (
-                <section className="flex items-center justify-between border-b-2 border-gray-300" key={item.id}>
+                <section className="flex flex-col gap-2 sm:gap-0 sm:flex-row px-4 items-center justify-between border-b-2 border-gray-300" key={item.id}>
                     <img
                         src={item.cover}
                         alt={item.title}
@@ -51,7 +51,7 @@ export function Cart() {
                 </section>
             ))}
 
-            {cart.length !== 0 && <p className="font-bold mt-4">Total: {total}</p>}
+            {cart.length !== 0 && <p className="font-bold mt-4 px-4">Total: {total}</p>}
         </div>
     )
 }

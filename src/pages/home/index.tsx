@@ -44,11 +44,11 @@ export function Home() {
                         <section className="w-full" key={product.id}>
                             <Link to={`/product/${product.id}`}>
                                 <img
-                                    className='w-full rounded-lg max-h-70 mb-2'
+                                    className='w-full rounded-lg max-h-70 mb-2 hover:scale-105 transition-all'
                                     src={product.cover}
                                     alt={product.title}
                                 />
-                                <p className='font-medium mt-1 mb-2'>{product.title}</p>
+                                <p className='font-medium mt-1 mb-2 hover:scale-105 transition-all'>{product.title}</p>
                             </Link>
                             <div className='flex gap-3 items-center'>
                                 <strong className='text-zinc-700/90 '>
