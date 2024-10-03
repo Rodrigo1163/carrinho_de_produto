@@ -19,11 +19,11 @@ export function Cart() {
                 </div>
             )}
             {cart.map(item => (
-                <section className="flex flex-col gap-2 sm:gap-0 sm:flex-row px-4 items-center justify-between border-b-2 border-gray-300" key={item.id}>
+                <section className="flex flex-col gap-2 py-5 sm:py-0 sm:gap-0 sm:flex-row px-4 items-center justify-between border-b-2 border-gray-300" key={item.id}>
                     <img
                         src={item.cover}
                         alt={item.title}
-                        className="w-28"
+                        className="w-36 sm:w-28"
                     />
 
                     <strong>Preço: {item.price}</strong>
