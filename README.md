@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Carrinho de Produtos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Texto Alternativo](/image.png)
 
-Currently, two official plugins are available:
+Este projeto é um carrinho de produtos simples, desenvolvido com **React** e **TypeScript**, utilizando a **Context API** do React para gerenciamento de estado global.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- **React**: Biblioteca para construir interfaces de usuário.
+- **Vite**: Ferramenta de construção rápida para desenvolvimento com suporte a hot module replacement.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **json-server**: Ferramenta que permite criar uma API RESTful a partir de um arquivo JSON.
+- **axios**: Ferramenta para realizar requisições HTTP.
+- **Tailwind CSS**: Biblioteca de estilização.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Funcionalidades
 
-- Configure the top-level `parserOptions` property like this:
+- Adicionar produtos ao carrinho.
+- Remover produtos do carrinho.
+- Visualizar o total do carrinho.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Como Instalar e Rodar o Projeto
+
+Para rodar o projeto localmente, siga os passos abaixo:
+
+### 1. Clonar o Repositório
+
+Primeiro, clone o repositório para sua máquina local:
+
+```bash
+git clone https://github.com/Rodrigo1163/carrinho_de_produto.git
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 2. Instalação das Dependências
+```bash
+npm install
+```
+### 3. Iniciar o Servidor JSON
+```bash
+json-server --watch db.json
+```
+### 4. Iniciar o Servidor do React
+```bash
+npm run dev
 ```
