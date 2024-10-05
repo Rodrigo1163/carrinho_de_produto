@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 
 
 export function Product() {
-    const [product, setProduct] = useState<ProductProps>()
+    const [product, setProduct] = useState<ProductProps>();
     const { id } = useParams();
     const { addItemCart } = useContext(CartContext)
     const navigate = useNavigate()

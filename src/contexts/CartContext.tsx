@@ -38,6 +38,7 @@ function CartProvider({ children }: CartProviderProps) {
 
             cartList[indexItem].amount = cartList[indexItem].amount + 1;
             cartList[indexItem].total = cartList[indexItem].amount * cartList[indexItem].price
+
             setCart(cartList)
             totalResultCart(cartList)
             return
@@ -59,6 +60,7 @@ function CartProvider({ children }: CartProviderProps) {
 
         if (cart[indexItem]?.amount > 1) {
             let cartList = cart;
+
             cartList[indexItem].amount = cartList[indexItem].amount - 1;
             cartList[indexItem].total = cartList[indexItem].total - cartList[indexItem].price
             setCart(cartList)
